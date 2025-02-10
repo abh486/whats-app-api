@@ -1,0 +1,1 @@
+export const mongoConnectingUrl = 'mongodb://localhost:27017/whatsapp'
