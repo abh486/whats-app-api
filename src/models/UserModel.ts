@@ -15,6 +15,12 @@ export class User extends Document{
     @Prop({required:true,min:6,max:20})
     password:string
 
+    @Prop({type:String, default:null})
+    otp?:string;
+
+    @Prop({type:Date, default:null})
+    otpExpires?:Date
+
 }
 
 export const userSchema = SchemaFactory.createForClass(User)
