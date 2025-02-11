@@ -7,10 +7,12 @@ import { jwtConstants } from './jwtConstants';
 import { MongooseModule } from '@nestjs/mongoose';
 import { userSchema, userSchemaName } from 'src/models/UserModel';
 import { UsersModule } from 'src/users/users.module';
+import { MailModule } from 'src/mail-service/mail.module';
 
 @Module({
   imports:[
     UsersModule,
+    MailModule,
     PassportModule.register({defaultStrategy:'jwt'}),
     JwtModule.register({
       secret:jwtConstants.secret,
